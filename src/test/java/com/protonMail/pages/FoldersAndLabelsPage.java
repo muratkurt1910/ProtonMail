@@ -1,10 +1,13 @@
 package com.protonMail.pages;
 
 import com.protonMail.utilities.Driver;
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
 import java.util.ArrayList;
@@ -16,7 +19,7 @@ public class FoldersAndLabelsPage extends DashboardPage {
     @FindBy(id = "accountName")
     public WebElement nameBox;
 
-    @FindBy(xpath = "//*[@role='alert']")
+    @FindAll({@FindBy( xpath = "//*[@role='alert']"), @FindBy(xpath = "//span[@ng-show='!$messageTemplate']"), @FindBy(className = "ng-hide")})
     public WebElement alert;
 
     @FindBy(css = "[data-name='mailbox']")
