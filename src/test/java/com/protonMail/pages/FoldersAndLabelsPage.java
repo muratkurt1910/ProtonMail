@@ -19,7 +19,7 @@ public class FoldersAndLabelsPage extends DashboardPage {
     @FindBy(id = "accountName")
     public WebElement nameBox;
 
-    @FindAll({@FindBy( xpath = "//*[@role='alert']"), @FindBy(xpath = "//span[@ng-show='!$messageTemplate']"), @FindBy(className = "ng-hide")})
+    @FindAll({@FindBy( xpath = "//*[@role='alert']"), @FindBy(className = "ng-hide"), @FindBy(xpath = "//span[@ng-show='!$messageTemplate']")})
     public WebElement alert;
 
     @FindBy(css = "[data-name='mailbox']")
