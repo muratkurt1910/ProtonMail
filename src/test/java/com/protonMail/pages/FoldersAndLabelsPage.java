@@ -23,7 +23,10 @@ public class FoldersAndLabelsPage extends DashboardPage {
     public WebElement mailbox;
 
     public String getAlertMessage() throws InterruptedException {
-        Thread.sleep(1);
+        while (!alert.isDisplayed()){
+            Thread.sleep(1000);
+        }
+
         try {
             wait.until(ExpectedConditions.visibilityOf(alert));
         }catch (TimeoutException e){
