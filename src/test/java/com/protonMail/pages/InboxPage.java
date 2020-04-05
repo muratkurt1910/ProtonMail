@@ -17,7 +17,7 @@ public class InboxPage extends DashboardPage {
     public void closeWelcome(){
         WebDriverWait wait = new WebDriverWait(Driver.get(), 5);
         wait.until(ExpectedConditions.elementToBeClickable(welcomeClose));
-        welcomeClose.click();
+        clickButton("Not now");
     }
 
     public void chooseEmail(String emailTitle){
