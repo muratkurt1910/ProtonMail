@@ -3,8 +3,7 @@ Feature: Settings Folders and Labels
 
   Background: User should be able to login with valid credentials
     Given User is on the login page
-    And User logs in with valid credentials username "haik.78" and password "1234qwerasdf"
-
+    And User logs in with valid credentials username and password
 
   Scenario: User should be able to create a label
     When User navigates to "Folders / Labels" folder
@@ -23,7 +22,6 @@ Feature: Settings Folders and Labels
     And User navigates to "Label1" folder
     And User should see the mail "How to secure your ProtonMail account" in the "Label1" folder
 
-
   Scenario: User should be able to archieve a mail while carrying to a label
     When User choose the email "Encrypt your Internet with ProtonVPN"
     And User navigates to "Label as" dropdown
@@ -33,7 +31,6 @@ Feature: Settings Folders and Labels
     Then User should see that the email "Encrypt your Internet with ProtonVPN" is deleted from "Inbox" folder
     And User navigates to "Archive" folder
     And User should see the mail "Encrypt your Internet with ProtonVPN" in the "Archive" folder
-
 
   Scenario: Multiple labels should be apply to a mail
     When User navigates to "Folders / Labels" folder
@@ -57,7 +54,6 @@ Feature: Settings Folders and Labels
     Then User should see "1 conversation moved to Inbox. Undo" message
     And User navigates to "Inbox" folder
     And User should see the mail "Encrypt your Internet with ProtonVPN" in the "Inbox" folder
-
 
   Scenario: After deleting email, it should be deleted the label as well
     When User choose the email "Encrypt your Internet with ProtonVPN"
