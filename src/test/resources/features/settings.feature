@@ -1,10 +1,10 @@
-
+@settings
 Feature: Settings Folders and Labels
 
   Background: User should be able to login with valid credentials
     Given User is on the login page
     And User logs in with valid credentials username and password
-  @settings
+
   Scenario: User should be able to create a label
     When User navigates to "Folders / Labels" folder
     And User clicks "Add label" button
