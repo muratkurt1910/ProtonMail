@@ -50,8 +50,7 @@
                 <version>2.22.2</version>
                 <configuration>
                     <parallel>methods</parallel>
-                    <perCoreThreadCount>false</perCoreThreadCount>
-                    <threadCountMethods>2</threadCountMethods>
+                    <useUnlimitedThreads>true</useUnlimitedThreads>
                     <testFailureIgnore>true</testFailureIgnore>
                     <runOrder>Alphabetical</runOrder>
                     <includes>

@@ -5,6 +5,7 @@ Feature: Settings Folders and Labels
     Given User is on the login page
     And User logs in with valid credentials username "haik.78" and password "1234qwerasdf"
 
+
   Scenario: User should be able to create a label
     When User navigates to "Folders / Labels" folder
     And User clicks "Add label" button

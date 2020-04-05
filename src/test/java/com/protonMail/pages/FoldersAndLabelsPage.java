@@ -56,9 +56,9 @@ public class FoldersAndLabelsPage extends DashboardPage {
             labelNamesStr.add(labelNames.getText());
         } catch (NoSuchElementException e) {
             e.printStackTrace();
+        }finally {
+            return labelNamesStr;
         }
-
-        return labelNamesStr;
     }
 
     public void deleteAllLabelsFolders() {

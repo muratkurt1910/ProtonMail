@@ -42,9 +42,8 @@ public class FoldersAndLabelsStepDefinitions {
 
     @Then("User should see created folder {string} on the Folders And Labels page")
     public void user_should_see_created_folder_on_the_Folders_And_Labels_page(String folder) {
-        Assert.assertTrue("User who has free account can not add more than 3 folders", foldersAndLabelsPage.getFolderNames(folder).size()<=3);
         Assert.assertTrue("User should see created folder " + folder + " on the Folders And Labels page", foldersAndLabelsPage.getFolderNames(folder).contains(folder));
-
+        Assert.assertTrue("User who has free account can not add more than 3 folders", foldersAndLabelsPage.getFolderNames(folder).size()<=3);
     }
 
     @Then("User should see the mail {string} in the {string} folder")
