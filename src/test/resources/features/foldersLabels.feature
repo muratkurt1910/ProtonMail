@@ -1,4 +1,4 @@
-@settings
+
 Feature: User who has free account can not add more three labels and folders
 
   Background:
