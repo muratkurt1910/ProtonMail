@@ -26,7 +26,7 @@ public class FoldersAndLabelsStepDefinitions {
     }
 
     @Then("User should see {string} message")
-    public void user_should_see_message(String message) {
+    public void user_should_see_message(String message) throws InterruptedException {
         String actualMessage = foldersAndLabelsPage.getAlertMessage();
         String expectedMessage = message;
 

@@ -25,7 +25,8 @@ public class FoldersAndLabelsPage extends DashboardPage {
     @FindBy(css = "[data-name='mailbox']")
     public WebElement mailbox;
 
-    public String getAlertMessage(){
+    public String getAlertMessage() throws InterruptedException {
+        Thread.sleep(1);
         wait.until(ExpectedConditions.visibilityOf(alert));
         return alert.getText();
     }
