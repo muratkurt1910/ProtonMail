@@ -1,10 +1,7 @@
 package com.protonMail.pages;
 
 import com.protonMail.utilities.Driver;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.FindBys;
@@ -19,7 +16,7 @@ public class FoldersAndLabelsPage extends DashboardPage {
     @FindBy(id = "accountName")
     public WebElement nameBox;
 
-    @FindAll({@FindBy( xpath = "//*[@role='alert']"), @FindBy(className = "ng-hide"), @FindBy(xpath = "//span[@ng-show='!$messageTemplate']")})
+    @FindAll({ @FindBy( xpath = "//*[@role='alert']"), @FindBy(className = "ng-hide"), @FindBy(xpath = "//span[@ng-show='!$messageTemplate']")})
     public WebElement alert;
 
     @FindBy(css = "[data-name='mailbox']")
@@ -27,8 +24,13 @@ public class FoldersAndLabelsPage extends DashboardPage {
 
     public String getAlertMessage() throws InterruptedException {
         Thread.sleep(1);
-        wait.until(ExpectedConditions.visibilityOf(alert));
-        return alert.getText();
+        try {
+            wait.until(ExpectedConditions.visibilityOf(alert));
+        }catch (TimeoutException e){
+            e.printStackTrace();
+        }finally {
+            return alert.getText();
+        }
     }
 
     public List<String> getLabelNames(){
