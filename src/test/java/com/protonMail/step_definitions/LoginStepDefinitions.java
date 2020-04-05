@@ -27,6 +27,7 @@ public class LoginStepDefinitions {
     public void user_logs_in_with_valid_credentials_username_and_password(String username, String password) {
         LoginPage loginPage = new LoginPage();
         loginPage.login(username, password);
+        InboxPage inboxPage = new InboxPage();
         new InboxPage().closeWelcome();
     }
 

@@ -2,12 +2,15 @@ package com.protonMail.pages;
 
 import com.protonMail.utilities.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 
 public class InboxPage extends DashboardPage {
 
@@ -17,7 +20,8 @@ public class InboxPage extends DashboardPage {
     public void closeWelcome(){
         WebDriverWait wait = new WebDriverWait(Driver.get(), 5);
         wait.until(ExpectedConditions.elementToBeClickable(welcomeClose));
-        clickButton("Not now");
+        JavascriptExecutor executor = (JavascriptExecutor) Driver.get();
+        executor.executeScript("arguments[0].click();", welcomeClose);
     }
 
     public void chooseEmail(String emailTitle){
