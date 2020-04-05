@@ -3,7 +3,7 @@ Feature: User who has free account can not add more three labels and folders
 
   Background:
     Given User is on the login page
-    And User logs in with valid credentials username "haik.78" and password "1234qwerasdf"
+    And User logs in with valid credentials username "montana.26" and password "1234qwerasdf"
     When User navigates to "Folders / Labels" folder
 
   Scenario Outline: User who has free account can not add more than three labels
