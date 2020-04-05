@@ -1,4 +1,4 @@
-@settings
+
 Feature: Settings Folders and Labels
 
   Background: User should be able to login with valid credentials
