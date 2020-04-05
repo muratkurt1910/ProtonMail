@@ -26,6 +26,7 @@ public class FoldersAndLabelsPage extends DashboardPage {
     public WebElement mailbox;
 
     public String getAlertMessage(){
+        wait.until(ExpectedConditions.alertIsPresent());
         wait.until(ExpectedConditions.visibilityOf(alert));
         return alert.getText();
     }
