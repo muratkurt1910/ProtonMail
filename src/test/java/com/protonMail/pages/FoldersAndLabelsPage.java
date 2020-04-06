@@ -62,7 +62,6 @@ public class FoldersAndLabelsPage extends DashboardPage {
 
     public void deleteAllLabelsFolders() {
         List<WebElement> deleteDropdown = Driver.get().findElements(By.cssSelector("[data-test-id='dropdown:open']"));
-        System.out.println("deleteDropdown.size() = " + deleteDropdown.size());
         for (int i = deleteDropdown.size()-1; i >= 0; i--) {
             wait.until(ExpectedConditions.elementToBeClickable(deleteDropdown.get(i)));
             try {
